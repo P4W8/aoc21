@@ -1,6 +1,6 @@
 import pathlib
 import sys
-from submarine import SubmarinePart1, SubmarinePart2
+from submarine import Submarine
 
 
 def parse(puzzle_input):
@@ -10,14 +10,14 @@ def parse(puzzle_input):
 
 def part1(data):
     """Solve part 1"""
-    m = SubmarinePart1(data)
+    m = Submarine({"forward": 0, "aim": 0, "depth": 0, "down": 0}, data)
     m.run()
     return m.memory["forward"] * m.memory["down"]
 
 
 def part2(data):
     """Solve part 2"""
-    m = SubmarinePart2(data)
+    m = Submarine({"forward": 0, "aim": 0, "depth": 0, "down": 0}, data)
     m.run()
     return m.memory["forward"] * m.memory["depth"]
 
