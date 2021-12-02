@@ -1,6 +1,6 @@
 import pathlib
 import sys
-from stateMachine import SubmarinePart1, SubmarinePart2
+from submarine import SubmarinePart1, SubmarinePart2
 
 
 def parse(puzzle_input):
