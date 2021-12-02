@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 @dataclass
-class StateMachine:
+class SubmarinePart1:
     memory = {"forward":0, "down":0}
     program: list[str]
 
@@ -26,8 +26,8 @@ class StateMachine:
 
 
 @dataclass
-class StateMachine2:
-    memory = {"forward":0, "down":0, "aim":0, "depth":0}
+class SubmarinePart2:
+    memory = {"forward":0, "aim":0, "depth":0}
     program: list[str]
 
     def run(self):

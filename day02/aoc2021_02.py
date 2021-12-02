@@ -1,6 +1,6 @@
 import pathlib
 import sys
-from stateMachine import StateMachine, StateMachine2
+from stateMachine import SubmarinePart1, SubmarinePart2
 
 
 def parse(puzzle_input):
@@ -10,14 +10,14 @@ def parse(puzzle_input):
 
 def part1(data):
     """Solve part 1"""
-    m = StateMachine(data)
+    m = SubmarinePart1(data)
     m.run()
     return m.memory["forward"] * m.memory["down"]
 
 
 def part2(data):
     """Solve part 2"""
-    m = StateMachine2(data)
+    m = SubmarinePart2(data)
     m.run()
     return m.memory["forward"] * m.memory["depth"]
 
