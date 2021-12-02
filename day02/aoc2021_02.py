@@ -1,17 +1,25 @@
 import pathlib
 import sys
+from stateMachine import StateMachine, StateMachine2
 
 
 def parse(puzzle_input):
     """Parse input"""
+    return puzzle_input.splitlines()
 
 
 def part1(data):
     """Solve part 1"""
+    m = StateMachine(data)
+    m.run()
+    return m.memory["forward"] * m.memory["down"]
 
 
 def part2(data):
     """Solve part 2"""
+    m = StateMachine2(data)
+    m.run()
+    return m.memory["forward"] * m.memory["depth"]
 
 
 def solve(puzzle_input):
