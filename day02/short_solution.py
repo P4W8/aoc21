@@ -1,6 +1,6 @@
 import numpy as np
 
-data = np.loadtxt('input.txt', delimiter='\n', dtype=int)
+data = np.loadtxt('input.txt', delimiter='\n', dtype=str)
 
 h = d = a = 0
 
